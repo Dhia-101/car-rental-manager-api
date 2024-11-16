@@ -6,7 +6,9 @@
   "scripts": {
     "db:up": "migrate-mongo up",
     "test": "jest --runInBand --verbose --coverage",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "engine": {
     "node": "12.14.1"

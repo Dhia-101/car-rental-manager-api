@@ -4,7 +4,7 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY package*.json /app
 RUN npm install
-ENV Carsen_jwtPrivateKey=myPrivateKey
+ENV Carsen_jwtPrivateKey=${{ secrets.JWT_SECRET_KEY }}
 COPY . /app
 
 CMD ["node", "index.js"]
