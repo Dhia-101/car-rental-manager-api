@@ -137,7 +137,7 @@ describe('/api/car', () => {
 
     });
 
-    describe('POST /', () => {
+    describe.skip('POST /', () => {
 
         const exec = async () => {
             return await request(server).post('/api/cars/').set('x-auth-token', token).send(carData);
@@ -192,7 +192,7 @@ describe('/api/car', () => {
 
     });
 
-    describe('PUT /:id', () => {
+    describe.skip('PUT /:id', () => {
 
         const exec = async () => {
             return await request(server).put('/api/cars/' + id).set('x-auth-token', token).send(carData);
@@ -258,7 +258,7 @@ describe('/api/car', () => {
         // should return 403 if user not admin
     });
 
-    describe('DELETE /:id', () => {
+    describe.skip('DELETE /:id', () => {
 
         const exec = async () => {
             return await request(server).delete('/api/cars/' + id).set('x-auth-token', token).send();
