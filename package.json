@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "db:up": "migrate-mongo up",
-    "test": "jest --runInBand --verbose --coverage",
+    "test": "jest --runInBand --verbose --coverage --forceExit --detectOpenHandles",
     "start": "node index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
