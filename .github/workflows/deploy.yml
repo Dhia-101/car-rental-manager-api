@@ -61,5 +61,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/car-rental-management-api:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/car-rental-management-api:${{ github.sha }}
