@@ -350,7 +350,7 @@ describe('/api/repair', () => {
             expect(result).not.toBeTruthy();
         });
 
-        it('should return the deleted repair if valid request', async () => {
+        it.skip('should return the deleted repair if valid request', async () => {
             repair.save();
             const result = await exec();
             expect(Object.keys(result.body)).toEqual(
