@@ -29,5 +29,8 @@
     "migrate-mongo": "^8.2.2",
     "mongoose": "^5.9.10",
     "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
   }
 }
