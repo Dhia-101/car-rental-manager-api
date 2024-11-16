@@ -32,7 +32,10 @@ describe('/api/base', () => {
         await server.close();
         await Base.remove({});
     });
-    afterAll(() => mongoose.disconnect());
+
+    afterAll(async () => {
+        await mongoose.connection.close();
+    });
 
     describe('GET /', () => {
 

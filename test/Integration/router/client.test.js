@@ -31,7 +31,10 @@ describe('/api/client', () => {
         await Agent.remove({});
         await Client.remove({});
     });
-    afterAll(() => mongoose.disconnect());
+
+    afterAll(async () => {
+        await mongoose.connection.close();
+    });
 
     describe('GET /', () => {
 

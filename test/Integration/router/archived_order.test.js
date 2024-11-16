@@ -29,7 +29,10 @@ describe('/api/archived_orders', () => {
         await server.close();
         await ArchivedOrder.remove({});
     });
-    afterAll(() => mongoose.disconnect());
+
+    afterAll(async () => {
+        await mongoose.connection.close();
+    });
 
     describe('GET /', () => {
 

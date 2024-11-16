@@ -55,6 +55,10 @@ describe('/api/orders', () => {
         await Car.remove({});
     });
 
+    afterAll(async () => {
+        await mongoose.connection.close();
+    });
+
     describe('GET /', () => {
 
         const exec = async () => {

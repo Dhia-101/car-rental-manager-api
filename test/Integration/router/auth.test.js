@@ -11,6 +11,10 @@ describe('/api/auth', () => {
     beforeEach(() => { server = require('../../../index'); });
     afterEach(async () => { await server.close(); })
 
+    afterAll(async () => {
+        await mongoose.connection.close();
+    });
+
     it('should return 400 if invalid data', async () => {
         const result = await request(server).post('/api/auth/').send({});
         expect(result.status).toBe(400);

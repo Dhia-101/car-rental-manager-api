@@ -40,7 +40,9 @@ describe('/api/agent', () => {
         await Base.remove({});
     });
 
-    afterAll(() => mongoose.disconnect());
+    afterAll(async () => {
+        await mongoose.connection.close();
+    });
 
     describe('GET /', () => {
 

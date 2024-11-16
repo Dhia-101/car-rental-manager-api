@@ -42,7 +42,10 @@ describe('/api/mechanic', () => {
         await Base.remove({});
         await Mechanic.remove({});
     });
-    afterAll(() => mongoose.disconnect());
+    afterAll(async () => {
+        await mongoose.connection.close();
+    });
+
 
     describe('GET /', () => {
 

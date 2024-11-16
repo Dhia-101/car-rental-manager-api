@@ -60,7 +60,7 @@ describe('/api/repair', () => {
         await Car.remove({});
         await Repair.remove({});
     });
-    afterAll(() => mongoose.disconnect());
+    afterAll(async () => await mongoose.disconnect());
 
     describe('GET /', () => {
 
