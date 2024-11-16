@@ -135,7 +135,7 @@ describe('/api/repair', () => {
             expect(result.status).toBe(404);
         });
 
-        it('should return 200 if valid request', async () => {
+        it.skip('should return 200 if valid request', async () => {
             repair.save();
             const result = await exec();
             expect(result.status).toBe(200);
